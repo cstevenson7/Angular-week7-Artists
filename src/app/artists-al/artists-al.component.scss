@@ -20,6 +20,7 @@ h1{
     grid-area: artistsDob;
     border: 1px solid black;
     display:block;
+    margin-bottom: 3vh;
 
 }
 
@@ -27,6 +28,7 @@ h1{
     grid-area:artistsSong;
     border: 1px solid black;
     display:block;
+    margin-bottom: 3vh;
     
 }
 
@@ -44,20 +46,20 @@ h1{
 
 #artistsDobDisplay{
     grid-area: artistsDobDisplay;
-    font-size: 1.3em;
-    margin:5px 0;
+    font-size: 1em;
+    margin: .5px 15px 37px;
 }
 
 #artistsSongDisplay{
     grid-area: artistsSongDisplay;
-    font-size: 1.3em;
-    margin:5px 0;
+    font-size: 1em;
+    margin: 10px 15px 40px;
 }
 
 #artistsGenreDisplay{
     grid-area: artistsGenreDisplay;
-    font-size:1.3em;
-    margin:5px 0;
+    font-size: 1em;
+    margin: 10px 15px;
 }
 .alert{
     font-size: .75rem;
@@ -67,7 +69,7 @@ h1{
 
 .alert-danger{
     color:red;
-    margin-left: 30vw;
+    margin-left: 46vw;
     padding: 2px;
 
 }
