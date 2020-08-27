@@ -1,0 +1,29 @@
+<h1>Add a fake bio for Janice Joplin:</h1>
+<section>
+    <div>
+    <form [formGroup] = "artistsForm" >
+        <label for="artistsDob"> Artist's Date of Birth: </label>
+        <input type="text" formControlName ="artistsDob" id="artistsDob" [(ngModel)] = "artistsDobDisplay">
+        <div *ngIf="artistsDob.invalid && (artistsDob.dirty || artistsDob.touched)" class="alert alert-danger">The date of birth is required</div>
+
+        <label for="artistsSong"> Artist's Top Selling Song: </label>
+        <input [(ngModel)] ="artistsSongDisplay" type="text" formControlName ="artistsSong" id="artistsSong">
+        <div *ngIf="artistsSong.invalid && (artistsSong.dirty || artistsSong.touched)" class="alert alert-danger">A song name is Required </div>
+
+        <label for="artistsGenre">Artist's Genre: </label>
+        <input type="text" formControlName= "artistsGenre" id="artistsGenre" [(ngModel)] = "artistsGenreDisplay">        
+        <div *ngIf="artistsGenre.invalid && (artistsGenre.dirty || artistsGenre.touched)" class="alert alert-danger">Artists Genre is Required with at least 3 characters</div>
+        <!-- left thsi in even thought it just dipalyes on the console for nw-->
+            <button type="button" (click)="onSubmit()" id="submitButton"> Submit Button</button>
+    </form>
+    </div>
+
+    <div>
+        <br>
+        <p id="artistsDobDisplay">{{ artistsDobDisplay }}</p>
+        <p id="artistsSongDisplay"> {{ artistsSongDisplay }}</p>
+        <p id="artistsGenreDisplay">{{ artistsGenreDisplay }}</p>
+    </div>
+
+</section>
+

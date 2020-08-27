@@ -1,0 +1,77 @@
+section{
+    display:grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "artistsDob   artistsDobDisplay"
+    "artistsSong   artistsSongDisplay"
+    "artistsGenre  artistsGenreDisplay"
+    "submitButton  submitButton";
+}
+h1{
+    margin-top: 3vh;
+    margin-left: 41vw;
+    margin-bottom: 3vh;
+}
+
+#artistsDob{
+    grid-area: artistsDob;
+    border: 1px solid black;
+    display:block;
+
+}
+
+#artistsSong{
+    grid-area:artistsSong;
+    border: 1px solid black;
+    display:block;
+    
+}
+
+#artistsGenre{
+    grid-area: artistsGenre;
+    border: 1px solid black;
+    display: block;
+
+}
+
+#artistsDob,#artistsSong,#artistsGenre,label,button{
+    margin-left:45vw;
+    
+}
+
+#artistsDobDisplay{
+    grid-area: artistsDobDisplay;
+    font-size: 1.3em;
+    margin:5px 0;
+}
+
+#artistsSongDisplay{
+    grid-area: artistsSongDisplay;
+    font-size: 1.3em;
+    margin:5px 0;
+}
+
+#artistsGenreDisplay{
+    grid-area: artistsGenreDisplay;
+    font-size:1.3em;
+    margin:5px 0;
+}
+.alert{
+    font-size: .75rem;
+    font-weight: bold;
+
+}
+
+.alert-danger{
+    color:red;
+    margin-left: 30vw;
+    padding: 2px;
+
+}
+
+button{
+    margin-top: 2vh;
+}

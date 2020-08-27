@@ -1,0 +1,47 @@
+<mat-sidenav-container class="sidenav-container">
+    ​
+        <!--SideNav-->
+        <mat-sidenav #drawer class="sidenav" fixedInViewport
+            [attr.role] = "(isHandset$ | async) ? 'dialog': 'navigation' "
+            [mode] = "(isHandset$ | async) ? 'over' : 'side' "
+            [opened] = "false"
+        >
+        <mat-toolbar>Menu</mat-toolbar>
+        <mat-nav-list>
+            <a mat-list-item routerLink="/home" (click)="drawer.close()">Home</a>
+            <a mat-list-item routerLink="/al" (click)="drawer.close()">Al Green</a>
+            <a mat-list-item routerLink="/aretha" (click)="drawer.close()">Aretha Franklin</a>
+            <a mat-list-item routerLink="/billy" (click)="drawer.close()">Billy Holiday</a>
+            <a mat-list-item routerLink="/janice" (click)="drawer.close()">Janice Joplin</a>
+            <a mat-list-item routerLink="/johnny" (click)="drawer.close()">Johnny Cash</a>
+        </mat-nav-list>
+    ​
+        </mat-sidenav>
+        <mat-sidenav-content>
+        <!--Top Toolbar-->
+    ​
+        <mat-toolbar>
+            <button type="button"
+                aria-label="Toggle sidenav"
+                mat-icon-button
+                (click)="drawer.toggle()"
+                *ngIf = "isHandset$ | async"
+            ><mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+    ​
+        <span class="logo" routerLink="/home">Favorite Artists</span>
+        <span class="fill-space"></span>
+        <div *ngIf="!(isHandset$ | async)">
+            <a mat-button routerLink="/home">Home</a>
+            <a mat-button routerLink="/al">Al Green</a>
+            <a mat-button routerLink="/aretha">Aretha Franklin</a>
+            <a mat-button routerLink="/billy">Billy Holiday</a>
+            <a mat-button routerLink="/janice">Janice Joplin</a>
+            <a mat-button routerLink="/johhny">Johnny Cash</a>
+        </div>
+        </mat-toolbar>
+        <!--Transclusion in Angular-->
+        <ng-content></ng-content>
+    ​
+    </mat-sidenav-content>
+    </mat-sidenav-container>
